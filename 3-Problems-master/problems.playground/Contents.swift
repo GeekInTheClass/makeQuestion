@@ -25,6 +25,7 @@ let result1 = array1.reduce(array1[0], { (ret, item1, item2) -> Int in
     return
 })
 
+print("git 하다가 풀던게 날아갔네욯ㅎㅎㅎ!!!!!!!ㅜㅜ")
 
 
 // 문제 2: 한 변의 길이가 4~10인 정사각형의 넓이의 합
