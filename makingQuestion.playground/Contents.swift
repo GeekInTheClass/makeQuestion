@@ -11,18 +11,20 @@ print(sample[9])
 //문제 2 array = [2, 4, 10, 1, 3]이다. 오름차순 정렬 후 가장 5번째 숫자는?
 
 
-//문제 3 birthday = ["a" : 1, "b" : 12, "c" : 2, "d" : 5, "e" : 5, "f" : 10]. 생일 순으로 정렬하면?
-
+//문제 3 birthday = [1 : ["a" : 1], 2 : ["b" : 12], 3 : ["c" : 2], 4 : ["d" : 5], 5 : ["e" : 5], 6 : ["f" : 10]]. 생일 순으로 정렬하면?
+var birthday : [Int : [String: Int]] = [1 : ["a" : 1], 2 : ["b" : 12], 3 : ["c" : 2], 4 : ["d" : 5], 5 : ["e" : 5], 6 : ["f" : 10]]
 
 
 
 //문제 4 base = ["a" : 0, "b" : 1, "c" : 4, "d" : 1] 각각 정수 값을 두배하면?
 var base : [String: Int] = ["a" : 0, "b" : 1, "c" : 4, "d" : 1]
-var answer4  : [String : Int] = base
+var answer4  : [String : Int] = [:]
 
 
-for a in answer4{
-    a.value = a.value * a.value
+for a in answer4 {
+    var b = a
+    b.value = a.value * a.value
+    answer4[b.key] = b.value
 }
 
 
