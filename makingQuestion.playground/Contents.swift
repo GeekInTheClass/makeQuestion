@@ -8,12 +8,29 @@ for i in 0...7{
 }
 print(sample[9])
 
+
+
+
+
+
 //문제 2 array = [2, 4, 10, 1, 3]이다. 오름차순 정렬 후 가장 5번째 숫자는?
+var array2 =  [2, 4, 10, 1, 3]
+let sorted = array2.sorted { (item1, item2) -> Bool in
+    item1 < item2
+}
+print(sorted.last)
+
+
+
 
 
 //문제 3 birthday = [1 : ["a" : 1], 2 : ["b" : 12], 3 : ["c" : 2], 4 : ["d" : 5], 5 : ["e" : 5], 6 : ["f" : 10]]. 생일 순으로 정렬하면?
 var birthday : [Int : [String: Int]] = [1 : ["a" : 1], 2 : ["b" : 12], 3 : ["c" : 2], 4 : ["d" : 5], 5 : ["e" : 5], 6 : ["f" : 10]]
-
+var birthDate = birthday.values
+print(birthDate)
+birthDate.sorted { (item1, item2) -> Bool in
+    item1.values < item2.values
+}
 
 
 //문제 4 base = ["a" : 0, "b" : 1, "c" : 4, "d" : 1] 각각 정수 값을 두배하면?
@@ -34,7 +51,7 @@ for a in answer4 {
 
 var sample5 : [Int] = []
 
-for i in 0...9{
+for _ in 0...9{
     sample5.append(0)
 }
 
